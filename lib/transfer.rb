@@ -31,7 +31,10 @@ class Transfer
     end
 
     def reverse_transfer
-      execute_transaction.reverse
+      if @status = "complete"
+        @sender.deposit(@amount)
+        @reciever.deposit(@amount *-1)
+        @status = "reversed"
     end
 
 end
