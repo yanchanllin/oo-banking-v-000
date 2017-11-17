@@ -9,7 +9,7 @@ class BankAccount
       end
 
     def deposit
-      self << @balance
+      self << balance
     end
 
 end
