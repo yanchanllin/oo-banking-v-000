@@ -17,4 +17,12 @@ class Transfer
       false
      end
    end
+   
+     def execute_transaction
+       if valid? = true 
+       self = 1
+        else  
+         self.reject
+       end  
+     end 
 end
